@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "Yezdi Adventure Dashboard",
+    "slug": "yezdi-adventure-dashboard",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSBluetoothAlwaysUsageDescription": "This app uses Bluetooth to connect to your Yezdi Adventure bike for real-time dashboard data.",
+        "NSLocationWhenInUseUsageDescription": "This app uses location for navigation and speed estimation.",
+        "NSCameraUsageDescription": "This app uses the camera to scan QR codes for bike pairing.",
+        "NSMotionUsageDescription": "This app uses motion sensors for speed estimation when bike is not connected."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#000000"
+      },
+      "permissions": [
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      ["expo-location", {
+        "locationAlwaysAndWhenInUsePermission": "Allow Yezdi Dashboard to use your location for navigation."
+      }],
+      ["expo-barcode-scanner", {
+        "cameraPermission": "Allow Yezdi Dashboard to scan QR codes for bike authentication."
+      }]
+    ]
+  }
+}
